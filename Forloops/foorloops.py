@@ -1,2 +1,5 @@
-for i in range(5, 70, 10):
-    print(i)
+result = 0
+for i in range(1, 11):
+    
+    result += i
+print(result)
