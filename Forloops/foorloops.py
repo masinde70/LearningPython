@@ -1,8 +1,7 @@
-lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, False, True, False, False]
-tup = (1, 2, 3, 4, 5, 6, 7, "masinde", 45)
-for i, element in enumerate(tup):
-   if element == "masinde" or element == 7:
-      break
-   print(i, element)
+lst = [[1,2], [3,4],[5,6]]
 
-print("Done!")
+for i in range(len(lst)):
+    interior = lst[i]
+
+    for j in range(len(interior)):
+        print(interior[j])
