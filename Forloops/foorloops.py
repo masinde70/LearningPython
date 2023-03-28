@@ -1,5 +1,4 @@
-result = 0
-for i in range(1, 11):
+lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, False, True, False, False]
+for i in range(len(lst)):
     
-    result += i
-print(result)
+   print(lst[i])
