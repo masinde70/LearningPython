@@ -27,4 +27,10 @@ class MinMaxStack:
 
     def getMin(self):
         if self.storages:
-            
+            return self.minies[-1]
+        return None
+    
+    def getMax(self):
+        if self.storages:
+            return self.maxes[-1]
+        return None 
