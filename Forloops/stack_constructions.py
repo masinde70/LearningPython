@@ -16,3 +16,15 @@ class MinMaxStack:
             return self.storages.pop()
         return None
     
+    def push(self, value):
+        if self.storages:
+            self.maxes.append(value if value > self.maxes[-1] else self.maxes[-1])
+            self.minies.append(value if value < self.minies[-1] else self.minies[-1])
+        else:
+            self.maxes.append(value)
+            self.minies.append(value)
+        self.storages.append(value)
+
+    def getMin(self):
+        if self.storages:
+            
