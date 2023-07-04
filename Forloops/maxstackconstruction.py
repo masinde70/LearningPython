@@ -21,4 +21,13 @@ class MinMaxStack:
             newMinMax["max"] = max(lastMinMax["max"], number)
         self.minMaxStack.append(newMinMax)
         self.stack.append(number)
+
+    #O(1) time | O(1) space
+    def getMin(self):
+        return self.minMaxStack[len(self.minMaxStack)-1]["min"]
+    
+    #O(1) time | O(1)
+    def getMax(self):
+        return self.minMaxStack[len(self.minMaxStack) - 1]["max"]
+    
     
