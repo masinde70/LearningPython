@@ -7,4 +7,13 @@ def sunsetViews(buildings, direction):
     idx = startIdx
     while idx > 0 and idx < len(buildings):
         buildingHeight = buildings[idx]
+        while len(candidateBuildings) > 0 and buildings[candidateBuildings[-1]] <= buildingHeight:
+            candidateBuildings.pop()
+
+        candidateBuildings.append(idx)
+
+        idx += step
+
+    if direction == "WEST":
+        
 
