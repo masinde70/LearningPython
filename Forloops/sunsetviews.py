@@ -15,5 +15,7 @@ def sunsetViews(buildings, direction):
         idx += step
 
     if direction == "WEST":
-        
+        return candidateBuildings[::-1]
+    return candidateBuildings
+
 
