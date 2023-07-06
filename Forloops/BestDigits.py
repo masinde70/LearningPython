@@ -16,3 +16,7 @@ This step ensures that we maintain the desired order of digits in the resulting 
 
 def bestDigits(number, numDigts):
     stack = []
+
+    for digit in number:
+        while numDigts > 0 and len(stack) and digit > stack[-1]:
+            stack.pop()
