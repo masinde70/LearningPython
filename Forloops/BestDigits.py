@@ -20,3 +20,11 @@ def bestDigits(number, numDigts):
     for digit in number:
         while numDigts > 0 and len(stack) and digit > stack[-1]:
             stack.pop()
+            numDigts -= 1
+        stack.append(digit)
+
+        while numDigts > 0:
+            stack.pop()
+            numDigts-=1
+        
+        return ''.join(stack)
