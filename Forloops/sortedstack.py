@@ -6,3 +6,15 @@
   2. Push elements to the top of the stack by appending elements to the end of the array using the built-in .append()
   3. Peek at the element on the top of the stack by accessing the last element in the array.
  """
+
+
+def sortedStack(stack):
+    if len(stack) <= 1:
+        return stack
+    
+    v1 = stack.pop()
+    sortedStack(stack)
+    v2 = stack.pop()
+
+    
+    
