@@ -16,5 +16,15 @@ def sortedStack(stack):
     sortedStack(stack)
     v2 = stack.pop()
 
-    
+    if v2 > v1:
+        stack.append(v1)
+        sortedStack(stack)
+        stack.append(v2)
+    else:
+        stack.append(v2)
+        stack.append(v1)
+
+    return stack
+
+
     
