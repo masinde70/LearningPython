@@ -17,5 +17,15 @@ def reversePlishNotation(tokens):
     for token in tokens:
         if token not in operations:
             stack.append(int(token)) # Append as number
+        else:
+            # once we are here, we know we face an operation, 
+            # thus we perform c = operation(a,b), e.g. c =  a + b
+            b = stack.pop() 
+            a = stack.pop()
+            c = operations[token](a,b)
+            stack.append(c)
+
+    return stack[-1]
+
     
 
