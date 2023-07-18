@@ -12,4 +12,11 @@ the value at that particular index in the output array should be
 -1. For example, given array = [1, 2], your function should
 return [2, -1].
 
+Additionally, the function should treat the input array as 
+circular array. A circular array wraps around itself as if it
+were connected end to end. So the next index after the last index in circular array is the
+first index. This means that, for our problem, 
+given array = [0, 0, 5, 0,0,3,0,0] the next element after 3 is 5
+since the array is circular array.
+
 """
