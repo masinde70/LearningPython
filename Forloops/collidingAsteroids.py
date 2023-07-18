@@ -12,3 +12,10 @@ are the same size, they both explode.
 write a function that takes in this array of asteroids and returns an array of integers representing the asteroids after all
 collisions occur.
 """
+
+def collidingAsteroids(asteroids):
+    results = []
+    for asteroid in asteroids:
+        if asteroid > 0:
+            results.append(asteroid)
+            continue
