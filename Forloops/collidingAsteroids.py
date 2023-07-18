@@ -19,3 +19,10 @@ def collidingAsteroids(asteroids):
         if asteroid > 0:
             results.append(asteroid)
             continue
+        
+        while True:
+            if len(results) == 0 or results[-1] < 0:
+                results.append(asteroid)
+                break
+
+            asteroid = abs(asteroid)
