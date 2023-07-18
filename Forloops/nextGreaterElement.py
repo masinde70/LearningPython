@@ -22,3 +22,15 @@ since the array is circular array.
 """
 
 #O(n) time | O(n) space - where n is the length of the array
+def nextGreaterElement(array):
+    result = [-1] * len(array)
+    stack = []
+
+    for index in range(2 * len(array)):
+        circularIndex = index % len(array)
+
+        while len(stack) > 0 and array[stack[len(stack) - 1]] < array[circularIndex]:
+            top = stack.pop()
+            result[top] = array[circularIndex]
+        stack.append(circularIndex)
+    return result
