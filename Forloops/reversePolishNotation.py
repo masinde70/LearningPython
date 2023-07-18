@@ -10,4 +10,9 @@ def reversePlishNotation(tokens):
     # Observe that all operations in the dictionary below are binary
     # {"operation": lambda functional operation}
 
+    operations = {"+" : lambda a,b: a + b,
+                  "-" : lambda a,b: a - b,
+                  "*" : lambda a,b: a * b,
+                  "/" : lambda a,b: int(a/b)}
     
+
