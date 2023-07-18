@@ -1,4 +1,5 @@
 """
 Next Greater Element 
-Write a function that takes in array of integers
+Write a function that takes in array of integers and returns
+
 """
