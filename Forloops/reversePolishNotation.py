@@ -14,5 +14,8 @@ def reversePlishNotation(tokens):
                   "-" : lambda a,b: a - b,
                   "*" : lambda a,b: a * b,
                   "/" : lambda a,b: int(a/b)}
+    for token in tokens:
+        if token not in operations:
+            stack.append(int(token)) # Append as number
     
 
