@@ -20,3 +20,5 @@ given array = [0, 0, 5, 0,0,3,0,0] the next element after 3 is 5
 since the array is circular array.
 
 """
+
+#O(n) time | O(n) space - where n is the length of the array
