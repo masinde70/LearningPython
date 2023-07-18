@@ -14,23 +14,28 @@ collisions occur.
 """
 
 def collidingAsteroids(asteroids):
-    results = []
-    for asteroid in asteroids:
-        if asteroid > 0:
-            results.append(asteroid)
-            continue
-
-        while True:
-            if len(results) == 0 or results[-1] < 0:
-                results.append(asteroid)
+       # Write your code here.
+    stack_aster = []
+    for curr in asteroids:
+        # Collision when incoming asteroid is -ve 
+        # top of the stack is posive
+        while stack_aster and curr < 0 < stack_aster[-1]:
+             top = stack_aster[-1]
+            #both are equal so both destroyed
+             if abs(top) == abs(curr):
+                stack_aster.pop()
                 break
+             # +ve asteroid on top of stack is destroyed
+             elif abs(top) < abs(curr):
+                stack_aster.pop()
+                continue
+             
+             else:# the new -ve asteroid was destroid by larger asteroid on top of the stack
 
-            asteroidsize = abs(asteroid)
-            if results[-1] > asteroidsize:
                 break
+        else:
+            stack_aster.append(curr)
+            # -ve asteroid made it all the way to the 
+            # bottom of the stack and destroyed all asteroids
 
-            if results[-1] == asteroidsize:
-                results.pop()
-                break
-            results.pop
-    return results
+    return stack_aster
