@@ -5,3 +5,12 @@ class Stack:
     def pop(self):
         if self.empty() is False:
             return self.stack.pop()
+    
+    def push(self, value):
+        self.stack.append(value)
+
+    def empty(self):
+        if len(self.stack) == 0:
+            return True
+        return False
+    
