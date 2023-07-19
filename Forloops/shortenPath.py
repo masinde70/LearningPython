@@ -14,3 +14,6 @@ class Stack:
             return True
         return False
     
+    def __str__(self) -> str:
+        return str(self.stack)
+    
