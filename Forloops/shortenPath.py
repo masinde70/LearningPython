@@ -14,7 +14,7 @@ class Stack:
             return True
         return False
     
-    def __str__(self) -> str:
+    def __str__(self):
         return str(self.stack)
     
     def __len__(self):
@@ -26,7 +26,7 @@ class Stack:
         
     def return_as_list(self):
         return self.stack
-    
+
 def shortenPath(path):
     stack = Stack()
     absolute = False
@@ -38,5 +38,18 @@ def shortenPath(path):
     for dir in directories:
         if dir == '.' or dir == '':
             continue
-        
-    
+            
+        elif dir == '..':
+            if stack.empty() and not absolute:
+                stack.push(dir)
+            elif absolute or stack.top() != '..':
+                stack.pop()
+            else:
+                stack.push(dir)
+        else:
+            stack.push(dir)
+    result = '/'.join(stack.return_as_list())
+
+    if absolute is True: return '/' + result
+
+    return result
