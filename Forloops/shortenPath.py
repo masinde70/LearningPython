@@ -27,3 +27,16 @@ class Stack:
     def return_as_list(self):
         return self.stack
     
+def shortenPath(path):
+    stack = Stack()
+    absolute = False
+
+    if path[0] == '/': absolute = True
+
+    directories = path.split('/')
+
+    for dir in directories:
+        if dir == '.' or dir == '':
+            continue
+        
+    
