@@ -17,3 +17,13 @@ class Stack:
     def __str__(self) -> str:
         return str(self.stack)
     
+    def __len__(self):
+        return len(self.stack)
+    
+    def top(self):
+        if self.empty() is False:
+            return self.stack[-1]
+        
+    def return_as_list(self):
+        return self.stack
+    
