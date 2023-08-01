@@ -11,4 +11,17 @@ one team is designated the home team, while the other team is the away team.
 In each competition there's always one winner and one lose;
 ther are no ties. A team receives 3 points if it wins and 0 if it loses.
 The winner of the tournament is the team that recieves the most amount of points
+
+
 """
+
+def tournament_winner(competions, results):
+    dict = {}
+
+    for i, comp in enumerate(competions):
+        if results[i]:
+            dict[comp[0]] = dict.get(comp[0], 0) + 1
+        else:
+            dict[comp[1]] = dict.get(comp[1], 0) + 1
+
+    return max(dict, key=dict.get)
